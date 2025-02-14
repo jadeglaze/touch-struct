@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "touch-struct"
+version = "0.1.0"
+authors = [
+    { name="Jade Glaze", email="jade.glaze@gmail.com" },
+]
+description = "A tool to create directory structures from text representations"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "click>=8.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jadeglaze/touch-struct"
+"Bug Tracker" = "https://github.com/jadeglaze/touch-struct/issues"
+
+[project.scripts]
+touch-struct = "touch_struct.cli:main"
